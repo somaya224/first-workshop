@@ -99,6 +99,10 @@ button {
 
 }
 
+.btn:hover {
+	background-color: #a60000;
+}
+
 
 
 
