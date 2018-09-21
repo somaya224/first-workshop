@@ -1,24 +1,28 @@
+/* the main style for the webpage */
 *{
   box-sizing: border-box;
 }
 
 html {
-  font: sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 body {
-	background-color: #ff0000;
 	margin: 0;
 }
 
-.container {
+/* styling the header */
+header {
+	background-color: #ff0000;
+	height: 550px;
+}
+
+header .header-container {
 	width: 660px;
 	margin: 0 auto;
 }
 
-.nav{
-	/*display: flex;
-	justify-content: space-around;*/
+.header-container .nav{
 	height: 45px;
 }
 
@@ -33,30 +37,21 @@ body {
 .nav li {
 	display: inline-block;
 	list-style-type: none;
-	/*width: 100px;*/
-	/*height: 50px;*/
 }
 
 .nav li a {
 	text-decoration: none;
 	display: inline-block;
 	padding: 0 10px;
-	/*padding-top: 0;*/
 	font-size: 0.80em;
 	width: 100%;
-	/*height: 50px;*/
 	line-height: 3.5;
 	text-align: left;
 	color: #fff;
-	/*border: 5px ridge black;*/
-
 }
 
 .nav li a:focus {
 	background-color: #a60000;
-	/*border: 0 5px 5px 5px solid transparent;
-	border-image: linear-gradient(to bottom, #3acfd5 0%, #3acfd5 100%);
-	border-image-slice: 1;*/
 	border: 5px solid #ff0000;
 	outline: 1px solid  hsl(0, 100%, 48%);
 	border-width: 0 3px 3px 3px;
@@ -64,10 +59,9 @@ body {
 
 .nav li a:hover {
 	background-color: #a60000;
-	/*border: 5px ridge #ff0000;*/
-}
+	}
 
-img {
+.perPhoto {
 	border-radius: 100%;
 	width: 275px;
 	height: 275px;
@@ -75,7 +69,7 @@ img {
 	margin: 15px auto;
 }
 
-p {
+header p {
 	text-align: center;
 }
 .name {
@@ -84,7 +78,7 @@ p {
 	margin: 10px 0;
 }
 
-.experience {
+.intro {
 	font-size: 1.5em;
 	margin-top: 0;
 }
@@ -102,6 +96,343 @@ button {
 .btn:hover {
 	background-color: #a60000;
 }
+
+/* styling the samples section */
+hr {
+	border-color: #ff0000;
+	border-width: 0.5px;
+	width: 100px;
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+
+.samples {
+	font-size: 0.9em;
+	width: 1150px;
+	margin: 0 auto;
+}
+
+.samples h1, .tecSkills h1 {
+	color: #ff0000;
+	text-align: center;
+	font-size: 2.1em;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.statment, .description {
+
+	color: #6d6969;
+}
+
+.samples .statment {
+	text-align: center;
+	margin-top: 10px;
+
+}
+
+.samples .description {
+	line-height: 1.7;
+	margin-top: 50px;
+}
+
+table, td {
+	border: 1px solid #e4e4e4;
+	border-collapse: collapse;
+}
+
+td {
+	width: 287.5px;
+	height: 200px;
+	text-align: center;
+}
+
+td p {
+	font-size: 1.7em;
+}
+
+td i {
+	font-size:48px;
+	color: #ff0000;
+
+}
+
+.tecSkills {
+	margin-top: 50px;
+	background-color: #ff0000;
+	height: 480px;
+	width: 100%
+}
+
+.tecSkills h1 {
+	color: #fff;
+	text-align: center;
+	font-size: 1.8em;
+	padding-top: 50px;
+	margin-bottom: 0;
+}
+
+
+
+.panels {
+	height: 330px;
+  	margin: 0 auto;
+  	width: 1030px;
+  	position: relative;
+}
+
+article {
+  height: 330px;
+  width: 1030px;
+  display: none;
+}
+
+.active-panel {
+	display: flex;
+	justify-content: space-between;
+	width: 1030px;
+	margin: 0 auto;
+}
+
+svg {
+	margin-top: 0;
+}
+
+article h2 {
+	text-align: center;
+	font-size: 1.3em;
+	margin-top: 0;
+}
+
+article p {
+	color: #fff;
+	margin-bottom: 0;
+}
+
+/* styling the dots panels */
+.dots-container {
+	text-align: center;
+	margin-top: 0;
+}
+
+span {
+	cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 3px;
+    background-color: #e0c7c7;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+span.active, span:hover {
+	background-color: #fff;
+}
+
+.experience h1 {
+	text-align: center;
+	color: #ff0000;
+	font-size: 1.2em;
+}
+
+/* the timeline vertical */
+.experience {
+	background-color: #f3f3f3;
+	border: 2px solid #f3f3f3;
+	border-bottom-color: #eaeaea;
+	height: 660px;
+}
+
+.timeline {
+	position: relative;
+	width: 900px;
+	height: 500px;
+	margin: 0 auto;
+	font-size: 0.9em;
+	color: #fff;
+}
+
+/* draw the timeline actual line */
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 5px;
+	background-color: #B91817;
+	top: 0;
+  	bottom: 0;
+  	left: 50%;
+  	margin-left: -3px
+}
+
+/* Container around content */
+.container {
+  position: relative;
+  padding: 50px 35px;
+  width: 50%;
+  height: 110px;
+}
+
+/* draw The circles on the timeline */
+.container::after {
+	content: '+';
+	font-size: 1.5em;
+	text-align: center;
+  	position: absolute;
+  	width: 25px;
+  	height: 25px;
+  	right: -27px;
+	background-color: #B91817;
+	border: 15px solid #eaeaea;
+	top: 50px;
+  	border-radius: 50%;
+  	z-index: 1;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -27px;
+  top: 20px;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 70px;
+  width: 0;
+  z-index: 1;
+  right: 28px;
+  border: medium solid #3a3a3a;
+  border-width: 7px 0 7px 7px;
+  border-color: transparent #3a3a3a;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 40px;
+  width: 0;
+  z-index: 1;
+  left: 28px;
+  border: medium solid #3a3a3a;
+  border-width: 7px 7px 7px 0;
+  border-color: transparent #3a3a3a;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #3a3a3a;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 4px 4px 1px #dcdada;
+}
+
+.right .content {
+	top: -35px;
+}
+
+.timeline h2 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-size: 1.2em;
+}
+
+.timeline p {
+	margin-top: 0;
+}
+
+/* portfolio */
+.portfolio {
+	width: 1150px;
+	margin: 0 auto;
+}
+
+.portfolio h1 {
+	text-align: center;
+	color: #ff0000;
+	font-size: 1.8em;
+}
+
+.gallery-tabs {
+	text-align: center;
+	width: 350px;
+	margin: 40px auto 20px auto;
+}
+
+.portfolio ul {
+  	padding-left: 0;
+  	display: flex;
+  	justify-content: space-around;
+}
+
+.portfolio li {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #c5c5c5;
+}
+
+.gallery-tabs li a {
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 0 20px;
+  text-decoration: none;
+  width: 100%;
+  line-height: 3;
+  color: #c5c5c5;
+  text-align: center;
+}
+
+.gallery-tabs li a:focus, .gallery-tabs li a:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
+.gallery-tabs li a.active_tab {
+  background-color: #ff0000;
+  color: yellow;
+}
+
+.gallery {
+	background-color: black;
+	height: 625px;
+  	position: relative;
+  	clear: both;
+}
+
+section {
+	position: absolute;
+}
+
+.active-gallery{
+	width: 1150px;
+	display: flex;;
+	flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.projs {
+	width: 275px;
+	height: 275px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+
 
 
 
