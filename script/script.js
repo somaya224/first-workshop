@@ -46,8 +46,7 @@ function showAllProgress2() {
 		for(var i = 0; i < prog.length; i++) {
 			__showProgress(prog[i], cir_prog[i]);
 		}
-  	}
-
+}
 
 var tabs = document.querySelectorAll('span');
 var panels = document.querySelectorAll('article');
@@ -75,7 +74,7 @@ function setTabHandler(tab, tabPos) {
 }
 
 /* gallary */
-var gallaryTabs = document.querySelectorAll('.gallery-tabs li a');
+var gallaryTabs = document.querySelectorAll('.gallery-tabs li');
 var gallaryPanels = document.querySelectorAll('section');
 
 for(x = 0; x < gallaryTabs.length; x++) {
@@ -98,3 +97,15 @@ function setGallery(gaTab, gaTabPos) {
     gallaryPanels[gaTabPos].className = 'active-gallery';
   }
 }
+
+/*// Insert Map 
+function initMap () {
+	//  The location of Uluru
+	var location = {lat: 31.196200, lng: 29.887070};
+	// The map, centered at Uluru
+	var map = new google.maps.Map(
+		document.getElementById("map"), {zoom: 4, center: location}
+		);
+		// The marker, positioned at Uluru
+		var marker = new google.maps.Marker({position: location, map: map});
+}*/
